@@ -1,5 +1,5 @@
 {
-  "name": "app2app",
+  "name": "webinos-api-app2app",
   "publishConfig": {
     "tag": "alpha" 
   },
@@ -10,7 +10,7 @@
   "author": "Fabian Walraven <fabian.walraven@tno.nl>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fabianatwork/Webinos-Platform.git"
+    "url": "git://github.com/webinos/webinos-api-app2app.git"
   },
   "bugs": {
     "email": "webinos-wp4-ml@fokus.fraunhofer.de",
