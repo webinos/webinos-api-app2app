@@ -18,9 +18,7 @@
 
 (function() {
   App2AppModule = function (params) {
-
-    this.base = WebinosService;
-    this.base(params);
+    WebinosService.call(this, obj);
 
     this.peerId = generateIdentifier();
 
@@ -36,7 +34,12 @@
 
   };
 
-  App2AppModule.prototype = new WebinosService();
+  // Inherit all functions from WebinosService
+  App2AppModule.prototype = Object.create(WebinosService.prototype);
+  // The following allows the 'instanceof' to work properly
+  App2AppModule.prototype.constructor = App2AppModule;
+  // Register to the service discovery
+  _webinos.registerServiceConstructor("http://webinos.org/api/app2app", App2AppModule);
 
   App2AppModule.prototype.bindService = function (bindCallback) {
     if (typeof bindCallback.onBind === 'function') {
