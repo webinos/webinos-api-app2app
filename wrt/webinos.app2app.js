@@ -17,7 +17,7 @@
  ******************************************************************************/
 
 (function() {
-  var App2AppModule = function (params) {
+  var App2AppModule = function (obj) {
     WebinosService.call(this, obj);
 
     this.peerId = generateIdentifier();
